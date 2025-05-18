@@ -113,3 +113,14 @@ body::before {
     box-sizing: border-box;
   }
 }
+
+/* style.css */
+
+/* تنسيق المستطيل */
+.content-box {
+  border: 2px solid #007bff; /* لون الحافة */
+  padding: 20px; /* المسافة الداخلية */
+  border-radius: 10px; /* زاوية حواف دائرية */
+  background-color: #f8f9fa; /* لون خلفية المستطيل */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+}
