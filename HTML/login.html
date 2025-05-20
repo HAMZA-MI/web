@@ -37,3 +37,57 @@
       </div>
     </div>
   </nav>
+
+   <div class="container text-muted">
+    <form action="login.php" method="POST" id="login" novalidate name="login">
+        <h1 style="text-align: center;">Login</h1>
+        <br>
+        <p><b>Username</b>
+            <input id="id" name="id" class="form-control px-3 py-3 shadow" type="email" required placeholder="Enter your username">
+        </p>
+        <br>
+        <p><b>Password</b>
+            <input id="sifre" name="sifre" class="form-control px-3 py-3 shadow" type="password" required placeholder="Enter your password">
+        </p>
+        <br>
+        <p style="text-align: center;">
+            <button type="button" onclick="kontrol()" class="btn btn-success loginBtn">Login</button>
+        </p>
+    </form>
+
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <!-- Footer content removed -->
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Login form validation
+    function kontrol() {
+        var loginBtn = document.querySelector(".loginBtn");
+        var username = document.getElementById("id").value;
+        var password = document.getElementById("sifre").value;
+        if (password == null || password === "" || username == null || username === "") {
+            alert("All fields must be filled!");
+        } else {
+            loginBtn.setAttribute('type', 'submit');
+            loginBtn.closest('form').submit(); // Submit form manually
+        }
+    }
+
+    // Navbar toggle functionality
+    document.addEventListener("DOMContentLoaded", function () {
+        var toggler = document.querySelector(".navbar-toggler");
+        if (toggler) {
+            toggler.addEventListener("click", function () {
+                document.querySelector(".navbar-collapse").classList.toggle("show");
+            });
+        }
+    });
+</script>
