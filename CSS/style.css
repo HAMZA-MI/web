@@ -169,3 +169,29 @@ body::before {
     height: 250px;
   }
 }
+/* ===== نموذج الاتصال - شفافية على الحقول ===== */
+.site-section {
+  background: transparent !important;
+}
+
+#contactForm {
+  background: rgba(0, 0, 0, 0.6); /* لون داكن شفاف للخلفية */
+  backdrop-filter: blur(6px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.form-control,
+select.form-control,
+textarea.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #ccc;
+}
+
+.form-control::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
