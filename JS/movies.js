@@ -1,13 +1,14 @@
 const list = document.querySelector(".BbList");
 const api = "https://api.themoviedb.org/3/movie/popular?api_key=afca2656cc551632bb3c538c9d52ccc3&language=en-US";
-const images_api = "https://image.tmdb.org/t/p/w500"; // استخدم حجم مناسب للعرض
+const images_api = "https://image.tmdb.org/t/p/w500";
 
 fetch(api)
   .then(response => response.json())
   .then(data => {
+    let html = "";
     data.results.forEach(movie => {
       if (movie.poster_path) {
-        list.innerHTML += `
+        html += `
           <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm border-0">
               <img src="${images_api + movie.poster_path}" class="card-img-top" alt="${movie.original_title}" />
@@ -21,5 +22,6 @@ fetch(api)
         `;
       }
     });
+    list.innerHTML = html;
   })
   .catch(err => console.log("Error fetching movies: ", err));

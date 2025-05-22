@@ -7,25 +7,37 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .section-wrapper {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-image {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">Hamza</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="../index.html">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
           <li class="nav-item"><a class="nav-link active" href="Mycity.html">My City</a></li>
-          <li class="nav-item"><a class="nav-link" href="Team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="Culture.html">Culture</a></li>
           <li class="nav-item"><a class="nav-link" href="My%20interests.html">Interests</a></li>
           <li class="nav-item"><a class="nav-link" href="Contact%20Us.html">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
@@ -34,43 +46,27 @@
     </div>
   </nav>
 
+  <h2 class="text-center text-white my-4">Welcome to My City</h2>
+
   <!-- Image Slider -->
-  <h2 class="text-center text-white mb-4">Welcome to My City</h2>
   <div id="cityCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
     <div class="carousel-inner">
-
       <div class="carousel-item active">
-        <a href="#medina">
-          <img src="../IMG\Medina of Tunis Image Slider .jpg" class="d-block w-100" alt="Medina of Tunis">
-        </a>
+        <img src="../IMG/Medina of Tunis Image Slider .jpg" class="d-block w-100" alt="Medina of Tunis">
       </div>
-
       <div class="carousel-item">
-        <a href="#bardo">
-          <img src="../IMG\Bardo Museum Image Slider .jpg" class="d-block w-100" alt="Bardo Museum">
-        </a>
+        <img src="../IMG/Bardo Museum Image Slider .jpg" class="d-block w-100" alt="Bardo Museum">
       </div>
-
       <div class="carousel-item">
-        <a href="#carthage">
-          <img src="../IMG\carthage Image Slider.jpg" class="d-block w-100" alt="Carthage">
-        </a>
+        <img src="../IMG/carthage Image Slider.jpg" class="d-block w-100" alt="Carthage">
       </div>
-
       <div class="carousel-item">
-        <a href="#sidi-bou-said">
-          <img src="../IMG\Sidi Bou Saïd Image Slider.jpg" class="d-block w-100" alt="Sidi Bou Said">
-        </a>
+        <img src="../IMG/Sidi Bou Saïd Image Slider.jpg" class="d-block w-100" alt="Sidi Bou Said">
       </div>
-
       <div class="carousel-item">
-        <a href="#zitouna">
-          <img src="../IMG\al-zaytuna Image Slider.jpg" class="d-block w-100" alt="Zitouna Mosque">
-        </a>
+        <img src="../IMG/al-zaytuna Image Slider.jpg" class="d-block w-100" alt="Zitouna Mosque">
       </div>
-
     </div>
-
     <button class="carousel-control-prev" type="button" data-bs-target="#cityCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </button>
@@ -79,69 +75,59 @@
     </button>
   </div>
 
-  <!-- Main Content -->
-  <div class="container py-5">
-    
+  <!-- City Sections -->
+  <div class="container">
 
-    <!-- Medina Section -->
-    <div class="section-wrapper" id="medina">
+    <div class="section-wrapper">
       <a href="https://whc.unesco.org/en/list/36/" target="_blank">
-  <img src="../IMG/tunis-medina.jpg" alt="Medina of Tunis" class="section-image">
-</a>
-
-      <div class="content-box text-center">
+        <img src="../IMG/tunis-medina.jpg" alt="Medina of Tunis" class="section-image">
+      </a>
+      <div class="cv-box animate-slide-in w-75 mx-auto">
         <h4>Medina of Tunis</h4>
         <p>One of the oldest parts of the city, famous for its traditional markets, narrow alleys, and Islamic architecture.</p>
       </div>
     </div>
 
-    <!-- Bardo Section -->
-    <div class="section-wrapper" id="bardo">
+    <div class="section-wrapper">
       <a href="https://www.smithsonianmag.com/sponsored/national-bardo-museum-tunisia-worlds-largest-collection-roman-mosaics-180960204/" target="_blank">
-  <img src="../IMG/bardo-museum.jpg" alt="Bardo Museum" class="section-image">
-</a>
-
-      <div class="content-box text-center">
+        <img src="../IMG/bardo-museum.jpg" alt="Bardo Museum" class="section-image">
+      </a>
+      <div class="cv-box animate-slide-in w-75 mx-auto">
         <h4>Bardo Museum</h4>
         <p>One of the most famous museums in Tunisia, hosting Roman and Byzantine archaeological artifacts.</p>
       </div>
     </div>
 
-    <!-- Carthage Section -->
-    <div class="section-wrapper" id="carthage">
-<a href="https://whc.unesco.org/en/list/37/" target="_blank">
-  <img src="../IMG/carthage-ruins.jpg" alt="Carthage" class="section-image">
-</a>
-
-      <div class="content-box text-center">
+    <div class="section-wrapper">
+      <a href="https://whc.unesco.org/en/list/37/" target="_blank">
+        <img src="../IMG/carthage-ruins.jpg" alt="Carthage" class="section-image">
+      </a>
+      <div class="cv-box animate-slide-in w-75 mx-auto">
         <h4>Carthage</h4>
         <p>A historic Phoenician city dating back to the 9th century BC, rich in Roman ruins and ancient palaces.</p>
       </div>
     </div>
 
-    <!-- Sidi Bou Said Section -->
-    <div class="section-wrapper" id="sidi-bou-said">
+    <div class="section-wrapper">
       <a href="https://tunisiaguru.com/travel-tunisia/sidi-bou-said-tunis-a-complete-guide/" target="_blank">
-  <img src="../IMG/sidi-bou-said.jpg" alt="Sidi Bou Said" class="section-image">
-</a>
-
-      <div class="content-box text-center">
+        <img src="../IMG/sidi-bou-said.jpg" alt="Sidi Bou Said" class="section-image">
+      </a>
+      <div class="cv-box animate-slide-in w-75 mx-auto">
         <h4>Sidi Bou Said</h4>
         <p>A coastal village known for its blue-and-white houses and stunning views, a favorite tourist destination.</p>
       </div>
     </div>
 
-    <!-- Zitouna Mosque Section -->
-    <div class="section-wrapper" id="zitouna">
+    <div class="section-wrapper">
       <a href="https://tunisia-travel-guide.com/the-zitouna-mosque/" target="_blank">
-  <img src="../IMG/zitouna-mosque.jpg" alt="Zitouna Mosque" class="section-image">
-</a>
-
-      <div class="content-box text-center">
+        <img src="../IMG/zitouna-mosque.jpg" alt="Zitouna Mosque" class="section-image">
+      </a>
+      <div class="cv-box animate-slide-in w-75 mx-auto">
         <h4>Zitouna Mosque</h4>
         <p>One of the oldest and most respected mosques in the Islamic world, and a center of religious and scientific learning in Tunisia.</p>
       </div>
     </div>
+
   </div>
 
 </body>

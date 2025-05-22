@@ -5,13 +5,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  position: relative;
+  padding-top: 70px;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #000; /* لون مؤقت أثناء تحميل الصورة */
+  background-color: #000;
 }
 
-/* طبقة شفافة فوق الخلفية */
 body::before {
   content: "";
   position: fixed;
@@ -25,79 +24,23 @@ body::before {
 
 /* ========== العناصر العامة ========== */
 .navbar {
-  z-index: 1000;
-  position: relative;
-}
+  z-index: 9999;
 
-/* زر مخصص */
-.profile-banner .btn-custom {
-  border: 2px solid #fff;
-  color: white;
-  background: transparent;
-  padding: 10px 25px;
-  margin: 10px;
-  border-radius: 30px;
-  transition: 0.3s;
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.profile-banner .btn-custom:hover {
-  background-color: white;
-  color: black;
 }
 
 /* ========== صناديق المحتوى ========== */
-
-/* صندوق البروفايل */
-.profile-banner {
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  max-width: 900px;
-  margin: 50px auto;
-  backdrop-filter: blur(6px);
-  padding: 40px 20px;
-  text-align: center;
-  color: white;
-}
-
-/* صندوق السيرة الذاتية */
+.profile-banner,
 .cv-box {
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  font-weight: 400;
-  line-height: 1.6;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(6px);
-  padding: 40px 20px;
   max-width: 900px;
   margin: 50px auto;
+  backdrop-filter: blur(6px);
+  padding: 40px 20px;
   text-align: center;
+  color: white;
 }
 
-/* محتوى في MyCity */
-.content-box {
-  border: 2px solid #007bff;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 auto 30px;
-  max-width: 700px;
-  text-align: center;
-}
-
-.content-box a {
-  color: #007bff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.content-box a:hover {
-  text-decoration: underline;
-}
 
 /* ========== السلايدر ========== */
 .carousel {
@@ -112,7 +55,7 @@ body::before {
   border-radius: 10px;
 }
 
-/* صورة خارج الصندوق */
+/* ========== أقسام الصور الخارجية ========== */
 .section-wrapper {
   text-align: center;
   margin-bottom: 40px;
@@ -157,31 +100,16 @@ body::before {
     font-size: 14px;
   }
 
-  .profile-banner .btn-custom {
-    padding: 8px 15px;
-    font-size: 14px;
-    margin: 5px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   .carousel img {
     height: 250px;
   }
 }
-/* ===== نموذج الاتصال - شفافية على الحقول ===== */
+
+/* ===== نموذج الاتصال ===== */
 .site-section {
   background: transparent !important;
 }
 
-#contactForm {
-  background: rgba(0, 0, 0, 0.6); /* لون داكن شفاف للخلفية */
-  backdrop-filter: blur(6px);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  color: #fff;
-}
 
 .form-control,
 select.form-control,
@@ -194,4 +122,17 @@ textarea.form-control {
 .form-control::placeholder,
 textarea::placeholder {
   color: #ccc;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.1); /* شفافية خفيفة */
+  backdrop-filter: blur(5px); /* تأثير بلوري خلف البطاقة */
+  color: white; /* لون النص ليكون واضحًا فوق الخلفية الشفافة */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* إطار خفيف */
+}
+.center-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px); /* لتعويض ارتفاع الـ navbar */
+  padding-top: 70px; /* تأكيد وجود مسافة للـ navbar */
 }
