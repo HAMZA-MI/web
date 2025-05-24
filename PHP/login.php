@@ -16,7 +16,7 @@ if (empty($username) || empty($password)) {
 // التحقق من البريد الإلكتروني
 $domain = "@sakarya.edu.tr";
 if (!filter_var($username, FILTER_VALIDATE_EMAIL) || !str_ends_with($username, $domain)) {
-    header("Location: https://hamza-mi.github.io/web/HTML/login.html");
+    header("Location: http://hamza-mi.github.io/web/HTML/login.html");
 exit();
 
     exit();
@@ -29,7 +29,7 @@ $user_number = str_replace($domain, '', $username);
 if ($password === $user_number) {
     echo "<h2 style='text-align:center; margin-top: 100px;'>Hoşgeldiniz <b>$user_number</b></h2>";
 } else {
-   header("Location: https://hamza-mi.github.io/web/HTML/login.html");
+   header("Location: http://hamza-mi.github.io/web/HTML/login.html");
 exit();
 
     exit();
