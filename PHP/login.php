@@ -1,37 +1,18 @@
 <?php
-// عرض الأخطاء
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+$Name = $_POST['name'] ?? '';
+$Password = $_POST['sifre'] ?? '';
+$dname = "G231210579@sakarya.edu.tr";
+$dpassword = "G231210579";
 
-// استقبال البيانات
-$username = $_POST['id'] ?? '';
-$password = $_POST['sifre'] ?? '';
-
-// التحقق من الحقول
-if (empty($username) || empty($password)) {
-    header("Location: ../HTML/login.html");
-    exit();
-}
-
-// التحقق من البريد الإلكتروني
-$domain = "@sakarya.edu.tr";
-if (!filter_var($username, FILTER_VALIDATE_EMAIL) || !str_ends_with($username, $domain)) {
-    header("Location: http://hamza-mi.github.io/web/HTML/login.html");
-exit();
-
-    exit();
-}
-
-// استخراج الرقم الجامعي
-$user_number = str_replace($domain, '', $username);
-
-// التحقق من كلمة المرور
-if ($password === $user_number) {
-    echo "<h2 style='text-align:center; margin-top: 100px;'>Hoşgeldiniz <b>$user_number</b></h2>";
+if ($Name === $dname && $Password === $dpassword) {
+    $Message = "g231210571, Welcome usta";
+    echo "<script type = 'text/javascript'> alert('$Message');</script>";
+    echo "<script type='text/javascript'>setTimeout(function(){ window.location.href = ' https://hamza-mi.github.io/web/'; }, 500);</script>";
+    exit; 
 } else {
-   header("Location: http://hamza-mi.github.io/web/HTML/login.html");
-exit();
-
-    exit();
+    $FailMessage = "Lütfen email ve password kontrol edin.";
+    echo "<script type = 'text/javascript'> alert('$FailMessage');</script>";
+    echo "<script type='text/javascript'>setTimeout(function(){ window.location.href = 'https://hamza-mi.github.io/web/HTML/login.html'; }, 500);</script>";
+    exit;
 }
 ?>
